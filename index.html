@@ -55,162 +55,162 @@
         </div>
     </div>
     <section class="container">
-        <a class="link" href="./cli2re.html">CLI命令转RE</a>
+        <!-- <a class="link" href="./cli2re.html">CLI命令转RE</a> -->
         <header>Generator</header>
         <div id="output"></div>
         <form action="#" class="form" id="generator_body">
             <div class="column">
                 <div class="input-box">
                     <label for="input">Url</label>
-                    <input id="input" type="text" placeholder="链接或文件" required>
+                    <input id="input" type="text" placeholder="Input Url or File" required>
                 </div>
                 <div class="input-box">
                     <label>save-name</label>
-                    <input id="save-name" type="text" placeholder="设置保存文件名">
+                    <input id="save-name" type="text" placeholder="Set output filename">
                 </div>
                 <div class="input-box">
                     <label>base-url</label>
-                    <input id="base-url" type="text" placeholder="设置BaseURL">
+                    <input id="base-url" type="text" placeholder="Set BaseURL">
                 </div>
             </div>
             <div class="column">
                 <div class="input-box">
                     <label>save-dir</label>
-                    <input id="save-dir" type="text" placeholder="设置输出目录">
+                    <input id="save-dir" type="text" placeholder="Set output directory">
                 </div>
                 <div class="input-box">
                     <label>tmp-dir</label>
-                    <input id="tmp-dir" type="text" placeholder="设置临时文件存储目录">
+                    <input id="tmp-dir" type="text" placeholder="Set temporary file directory">
                 </div>
                 <div class="input-box">
                     <label>mux-import</label>
-                    <input id="mux-import" type="text" placeholder="混流时引入外部媒体文件">
+                    <input id="mux-import" type="text" placeholder="When MuxAfterDone enabled, allow to import local media files">
                 </div>
             </div>
             <div class="column">
                 <div class="input-box">
                     <label>thread-count</label>
-                    <input id="thread-count" type="text" placeholder="设置下载线程数 [default: 8]" defalut="8">
+                    <input id="thread-count" type="text" placeholder="Set download thread count [default: 10]" defalut="10">
                 </div>
                 <div class="input-box">
                     <label>download-retry-count</label>
-                    <input id="download-retry-count" type="text" placeholder="每个分片下载异常时的重试次数 [default: 3]" defalut="3">
+                    <input id="download-retry-count" type="text" placeholder="The number of retries when download segment error [default: 3]" defalut="3">
                 </div>
             </div>
             <div class="column">
                 <div class="input-box">
                     <label>max-speed</label>
-                    <input id="max-speed" type="text" placeholder="设置限速，单位支持 Mbps 或 Kbps，如：15M 100K" defalut="">
+                    <input id="max-speed" type="text" placeholder="Set speed limit, Mbps or Kbps, for example: 15M 100K." defalut="">
                 </div>
                 <div class="input-box">
                     <label>ffmpeg-binary-path</label>
-                    <input id="ffmpeg-binary-path" type="text" placeholder="ffmpeg可执行程序全路径, 例如 C:\Tools\ffmpeg.exe">
+                    <input id="ffmpeg-binary-path" type="text" placeholder="Full path to the ffmpeg binary, like C:\Tools\ffmpeg.exe">
                 </div>
             </div>
             <div class="column">
                 <div class="input-box">
                     <label>live-take-count</label>
-                    <input id="live-take-count" type="text" placeholder="手动设置录制直播时首次获取分片的数量 [default: 16]">
+                    <input id="live-take-count" type="text" placeholder="Manually set the number of segments downloaded for the first time when recording live [default: 16]">
                 </div>
                 <div class="input-box">
                     <label>urlprocessor-args</label>
-                    <input id="urlprocessor-args" type="text" placeholder="此字符串将直接传递给URL Processor">
+                    <input id="urlprocessor-args" type="text" placeholder="Give these arguments to the URL Processors.">
                 </div>
             </div>
             <div class="column">
                 <div class="input-box">
                     <label>key-text-file</label>
-                    <input id="key-text-file" type="text" placeholder="设置密钥文件,程序将从文件中按KID搜寻KEY以解密.(不建议使用特大文件)">
+                    <input id="key-text-file" type="text" placeholder="Set the kid-key file, the program will search the KEY with KID from the file.(Very large file are not recommended)">
                 </div>
                 <div class="input-box">
                     <label>decryption-binary-path</label>
-                    <input id="decryption-binary-path" type="text" placeholder=" MP4解密所用工具的全路径, 例如 C:\Tools\mp4decrypt.exe">
+                    <input id="decryption-binary-path" type="text" placeholder="Full path to the tool used for MP4 decryption, like C:\Tools\mp4decrypt.exe">
                 </div>
             </div>
 
             <div class="column">
                 <div class="input-box">
                     <label>mux-after-done</label>
-                    <input id="mux-after-done" type="text" placeholder="所有工作完成时尝试混流分离的音视频">
+                    <input id="mux-after-done" type="text" placeholder="When all works is done, try to mux the downloaded streams">
                 </div>
                 <div class="input-box">
                     <label>custom-hls-key</label>
-                    <input id="custom-hls-key" type="text" placeholder="指定HLS解密KEY. 可以是文件, HEX或Base64">
+                    <input id="custom-hls-key" type="text" placeholder="Set the HLS decryption key. Can be file, HEX or Base64">
                 </div>
             </div>
             <div class="column">
                 <div class="input-box">
                     <label>custom-hls-iv</label>
-                    <input id="custom-hls-iv" type="text" placeholder="指定HLS解密IV. 可以是文件, HEX或Base64">
+                    <input id="custom-hls-iv" type="text" placeholder="Set the HLS decryption iv. Can be file, HEX or Base64">
                 </div>
                 <div class="input-box">
                     <label>custom-proxy</label>
-                    <input id="custom-proxy" type="text" placeholder="设置请求代理, 如 http://127.0.0.1:8888">
+                    <input id="custom-proxy" type="text" placeholder="Set web request proxy, like http://127.0.0.1:8888">
                 </div>
             </div>
             <div class="column">
 
                 <div class="input-box">
                     <label>custom-range</label>
-                    <input id="custom-range" type="text" placeholder="仅下载部分分片">
+                    <input id="custom-range" type="text" placeholder="Download only part of the segments">
                 </div>
                 <div class="input-box">
                     <label>task-start-at</label>
-                    <input id="task-start-at" type="text" placeholder="格式:<yyyyMMddHHmmss>在此时间之前不会开始执行任务">
+                    <input id="task-start-at" type="text" placeholder="Task execution will not start before this time: yyyyMMddHHmmss">
                 </div>
             </div>
             <div class="column">
                 <div class="input-box">
                     <label>live-record-limit</label>
-                    <input id="live-record-limit" type="text" placeholder="录制直播时的录制时长限制,格式: HH:mm:ss">
+                    <input id="live-record-limit" type="text" placeholder="Recording time limit when recording live: HH:mm:ss">
                 </div>
                 <div class="input-box">
                     <label>live-wait-time</label>
-                    <input id="live-wait-time" type="text" placeholder="手动设置直播列表刷新间隔, 单位为秒">
+                    <input id="live-wait-time" type="text" placeholder="Manually set the live playlist refresh interval">
                 </div>
             </div>
             <div class="column">
                 <div class="input-box">
                     <label>ad-keyword</label>
-                    <input id="ad-keyword" type="text" placeholder="设置广告分片的URL关键字(正则表达式)">
+                    <input id="ad-keyword" type="text" placeholder="Set URL keywords (regular expressions) for AD segments">
                 </div>
             </div>
             <div class="column">
                 <div class="input-box">
                     <label>select-video</label>
-                    <input id="select-video" type="text" placeholder="通过正则表达式选择符合要求的视频流">
+                    <input id="select-video" type="text" placeholder="Select video streams by regular expressions">
                 </div>
                 <div class="input-box">
                     <label>select-audio</label>
-                    <input id="select-audio" type="text" placeholder="通过正则表达式选择符合要求的音频流">
+                    <input id="select-audio" type="text" placeholder="Select audios streams by regular expressions">
                 </div>
                 <div class="input-box">
                     <label>select-subtitle</label>
-                    <input id="select-subtitle" type="text" placeholder="通过正则表达式选择符合要求的字幕流">
+                    <input id="select-subtitle" type="text" placeholder="Select subtitle streams by regular expressions">
                 </div>
             </div>
             <div class="column">
                 <div class="input-box">
                     <label>drop-video</label>
-                    <input id="drop-video" type="text" placeholder="通过正则表达式去除符合要求的视频流">
+                    <input id="drop-video" type="text" placeholder="Drop video streams by regular expressions">
                 </div>
                 <div class="input-box">
                     <label>drop-audio</label>
-                    <input id="drop-audio" type="text" placeholder="通过正则表达式去除符合要求的音频流">
+                    <input id="drop-audio" type="text" placeholder="Drop aduio streams by regular expressions">
                 </div>
                 <div class="input-box">
                     <label>drop-subtitle</label>
-                    <input id="drop-subtitle" type="text" placeholder="通过正则表达式去除符合要求的字幕流">
+                    <input id="drop-subtitle" type="text" placeholder="Drop subtitle streams by regular expressions">
                 </div>
             </div>
             <div class="column">
                 <div id="header" class="input-box ">
                     <div class="row">
                         <label>header</label><label class="button"
-                            onclick="insert('#header','header','为HTTP请求设置特定的请求头, 例如: -H &#x0022;Cookie: mycookie&#x0022; -H &#x0022;User-Agent: iOS&#x0022;')">+</label><label
+                            onclick="insert('#header','header','Pass custom header(s) to server: -H &#x0022;Cookie: mycookie&#x0022; -H &#x0022;User-Agent: iOS&#x0022;')">+</label><label
                             class="button" onclick="removeLast('#header')">-</label>
                         <input type="text" id="header"
-                            placeholder="为HTTP请求设置特定的请求头, 例如: -H &#x0022;Cookie: mycookie&#x0022; -H &#x0022;User-Agent: iOS&#x0022;">
+                            placeholder="Pass custom header(s) to server: -H &#x0022;Cookie: mycookie&#x0022; -H &#x0022;User-Agent: iOS&#x0022;">
                     </div>
                 </div>
             </div>
@@ -218,17 +218,17 @@
                 <div id="key" class="input-box ">
                     <div class="row">
                         <label>key</label><label class="button"
-                            onclick="insert('#key','key','设置解密密钥, 程序调用mp4decrpyt/shaka-packager进行解密. 格式: --key KID1:KEY1 --key KID2:KEY2')">+</label><label
+                            onclick="insert('#key','key','Pass decryption key(s) to mp4decrypt/shaka-packager. format: --key KID1:KEY1 --key KID2:KEY2')">+</label><label
                             class="button" onclick="removeLast('#key')">-</label>
                         <input type="text" id="key"
-                            placeholder="设置解密密钥, 程序调用mp4decrpyt/shaka-packager进行解密. 格式: --key KID1:KEY1 --key KID2:KEY2">
+                            placeholder="Pass decryption key(s) to mp4decrypt/shaka-packager. format: --key KID1:KEY1 --key KID2:KEY2">
                     </div>
                 </div>
             </div>
             <div class="column">
                 <div class="input-box">
                     <label for="log-level">log-level</label>
-                    <div class="description">设置日志级别</div>
+                    <div class="description">Set log level</div>
                     <div class="select-box">
                         <select id="log-level">
                             <option value="">INFO</option>
@@ -241,7 +241,7 @@
                 </div>
                 <div class="input-box">
                     <label for="custom-hls-method">custom-hls-method</label>
-                    <div class="description">指定HLS加密方式</div>
+                    <div class="description">Set HLS encryption method</div>
                     <div class="select-box">
                         <select id="custom-hls-method">
                             <option value="">AUTO</option>
@@ -258,7 +258,7 @@
                 </div>
                 <div class="input-box">
                     <label for="sub-format">sub-format</label>
-                    <div class="description">字幕输出类型</div>
+                    <div class="description">Subtitle output format</div>
                     <div class="select-box">
                         <select id="sub-format">
                             <option value="">SRT</option>
@@ -268,7 +268,7 @@
                 </div>
                 <div class="input-box">
                     <label for="ui-language">ui-language</label>
-                    <div class="description">设置UI语言</div>
+                    <div class="description">Set UI language</div>
                     <div class="select-box">
                         <select id="ui-language">
                             <option value="">auto</option>
@@ -287,112 +287,112 @@
                         <div>
                             <input type="checkbox" id="no-log" />
                             <label for="no-log">no-log</label>
-                            <div class="description">关闭日志文件输出</div>
+                            <div class="description">Disable log file output</div>
                         </div>
                         <div>
                             <input type="checkbox" id="auto-select" />
                             <label for="auto-select">auto-select</label>
-                            <div class="description">自动选择所有类型的最佳轨道</div>
+                            <div class="description">Automatically selects the best tracks of all types</div>
                         </div>
                         <div>
                             <input type="checkbox" id="skip-merge" />
                             <label for="skip-merge">skip-merge</label>
-                            <div class="description">跳过合并分片</div>
+                            <div class="description">Skip segments merge</div>
                         </div>
                         <div>
                             <input type="checkbox" id="skip-download" />
                             <label for="skip-download">skip-download</label>
-                            <div class="description">跳过下载</div>
+                            <div class="description">Skip download</div>
                         </div>
                         <div>
                             <input type="checkbox" id="check-segments-count" checked default="true" />
                             <label for="check-segments-count">check-segments-count</label>
-                            <div class="description">检测实际下载的分片数量和预期数量是否匹配 </div>
+                            <div class="description"> Check if the actual number of segments downloaded matches the expected number </div>
                         </div>
                         <div>
                             <input type="checkbox" id="binary-merge" />
                             <label for="binary-merge">binary-merge</label>
-                            <div class="description">二进制合并</div>
+                            <div class="description">Binary merge</div>
                         </div>
                         <div>
                             <input type="checkbox" id="use-ffmpeg-concat-demuxer" />
                             <label for="use-ffmpeg-concat-demuxer">use-ffmpeg-concat-demuxer</label>
-                            <div class="description">使用 ffmpeg 合并时，使用 concat 分离器而非 concat 协议 [default: False]</div>
+                            <div class="description">When merging with ffmpeg, use the concat demuxer instead of the concat protocol</div>
                         </div>
                         <div>
                             <input type="checkbox" id="del-after-done" checked default="true" />
                             <label for="del-after-done">del-after-done</label>
-                            <div class="description">完成后删除临时文件 </div>
+                            <div class="description">Delete temporary files when done </div>
                         </div>
                         <div>
                             <input type="checkbox" id="no-date-info" />
                             <label for="no-date-info">no-date-info</label>
-                            <div class="description">混流时不写入日期信息</div>
+                            <div class="description">Date information is not written during muxing</div>
                         </div>
                         <div>
                             <input type="checkbox" id="write-meta-json" default="true" checked />
                             <label for="write-meta-json">write-meta-json</label>
-                            <div class="description">解析后的信息是否输出json文件</div>
+                            <div class="description">Write meta json after parsed</div>
                         </div>
                         <div>
                             <input type="checkbox" id="append-url-params" />
                             <label for="append-url-params">append-url-params</label>
-                            <div class="description">将输入Url的Params添加至分片, 对某些网站很有用, 例如 kakao.com</div>
+                            <div class="description">Add Params of input Url to segments, useful for some websites, such as kakao.com</div>
                         </div>
                         <div>
                             <input type="checkbox" id="concurrent-download" />
                             <label for="concurrent-download">concurrent-download</label>
-                            <div class="description">并发下载已选择的音频、视频和字幕</div>
+                            <div class="description">Concurrently download the selected audio, video and subtitles</div>
                         </div>
                         <div>
                             <input type="checkbox" id="sub-only" />
                             <label for="sub-only">sub-only</label>
-                            <div class="description">只选取字幕轨道</div>
+                            <div class="description">Select only subtitle tracks</div>
                         </div>
                         <div>
                             <input type="checkbox" id="auto-subtitle-fix" checked default="true" />
                             <label for="auto-subtitle-fix">auto-subtitle-fix</label>
-                            <div class="description">自动修正字幕 </div>
+                            <div class="description">Automatically fix subtitles </div>
                         </div>
                         <div>
                             <input type="checkbox" id="use-shaka-packager" />
                             <label for="use-shaka-packager">use-shaka-packager</label>
-                            <div class="description">解密时使用shaka-packager替代mp4decrypt</div>
+                            <div class="description">Use shaka-packager instead of mp4decrypt to decrypt</div>
                         </div>
                         <div>
                             <input type="checkbox" id="mp4-real-time-decryption" />
                             <label for="mp4-real-time-decryption">mp4-real-time-decryption</label>
-                            <div class="description">实时解密MP4分片</div>
+                            <div class="description">Decrypt MP4 segments in real time</div>
                         </div>
                         <div>
                             <input type="checkbox" id="use-system-proxy" checked default="true" />
                             <label for="use-system-proxy">use-system-proxy</label>
-                            <div class="description">使用系统默认代理 </div>
+                            <div class="description">Use system default proxy </div>
                         </div>
                         <div>
                             <input type="checkbox" id="live-perform-as-vod" />
                             <label for="live-perform-as-vod">live-perform-as-vod</label>
-                            <div class="description">以点播方式下载直播流</div>
+                            <div class="description">Download live streams as vod</div>
                         </div>
                         <div>
                             <input type="checkbox" id="live-real-time-merge" />
                             <label for="live-real-time-merge">live-real-time-merge</label>
-                            <div class="description">录制直播时实时合并</div>
+                            <div class="description">Real-time merge into file when recording live</div>
                         </div>
                         <div>
                             <input type="checkbox" id="live-keep-segments" checked default="true" />
                             <label for="live-keep-segments">live-keep-segments</label>
-                            <div class="description">录制直播并开启实时合并时依然保留分片 </div>
+                            <div class="description">Keep segments when recording a live (liveRealTimeMerge enabled) </div>
                         </div>
                         <div>
                             <input type="checkbox" id="live-pipe-mux" />
                             <label for="live-pipe-mux">live-pipe-mux</label>
-                            <div class="description">录制直播并开启实时合并时通过管道+ffmpeg实时混流到TS文件</div>
+                            <div class="description">Real-time muxing to TS file through pipeline + ffmpeg (liveRealTimeMerge enabled)</div>
                         </div>
                         <div>
                             <input type="checkbox" id="live-fix-vtt-by-audio" />
                             <label for="live-fix-vtt-by-audio">live-fix-vtt-by-audio</label>
-                            <div class="description">通过读取音频文件的起始时间修正VTT字幕 </div>
+                            <div class="description">Correct VTT sub by reading the start time of the audio file </div>
                         </div>
 
                     </div>
